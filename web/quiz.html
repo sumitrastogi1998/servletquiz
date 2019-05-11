@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <style>
+            p{padding-left: 5%;}
+            div{padding-left: 8%;}
+            h2{padding-right: 5%}
+            .button{
+                 background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+                
+            .button3 {background-color: #f44336;}
+        </style>
+    </head>
+    <body background="bg1.jpg">
+
+   <form id="as" action="Quiz">
+       <h1 align = 'center' style="padding: 3%">Quiz Test</h1>
+               <h2 id="demo" align="right"></h2>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date().getTime()+200000;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    
+    // Time calculations for days, hours, minutes and seconds
+    
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+   // document.getElementById("adminform").submit();
+    
+    // If the count down is over, write some text 
+    if (distance < 1) {
+        clearInterval(x);
+        document.getElementById("as").submit();
+    }
+}, 1000);
+</script>
+      <p>Q.1 What is your name?</p><br>
+     <div>
+  <input type="radio" name="Math" value="sumit" required> Sumit<br>
+  <input type="radio" name="Math" value="anuj" required> Aapse kya matlab<br>
+  <input type="radio" name="Math" value="aman" required> kya hi btau<br>
+  <input type="radio" name="Math" value="raju" required> Koi na<br></div>
+     
+<p>Q.2 What are your subjects?</p><br>
+<div>
+    <input type="radio" name="Physics" value="pcm" required> PCM<br>
+  <input type="radio" name="Physics" value="cbc" required> cbc<br>
+  <input type="radio" name="Physics" value="dbm" required> dbm<br>
+  <input type="radio" name="Physics" value="pcb" required> pcb<br>
+</div>
+  <p>Q.3 What is your favourite subject?</p><br>
+  <div>
+  <input type="radio" name="Chemistry" value="p" required> p<br>
+  <input type="radio" name="Chemistry" value="c" required> c<br>
+  <input type="radio" name="Chemistry" value="m" required> m<br>
+  <input type="radio" name="Chemistry" value="b" required> b<br>
+</div>
+    <p>Q.4 What is the thing you like the most?</p><br>
+ <div>
+    <input type="radio" name="like" value="padhna" required> Padhna<br>
+  <input type="radio" name="like" value="sona" required> Sona<br>
+  <input type="radio" name="like" value="firpadhna" required> FirPadhna<br>
+  <input type="radio" name="like" value="aandb" required> both a and b<br>
+</div>
+  <p>Q.5 Who invented C?</p><br>
+ <div>
+  <input type="radio" name="IC" value="ad" required> Ofcourse mene<br>
+  <input type="radio" name="IC" value="af" required> Kisi aur ne <br>
+  <input type="radio" name="IC" value="gd" required> Me kyu btau<br>
+  <input type="radio" name="IC" value="real" required> Dennis Ritchie<br>
+</div>
+  <br>
+  <br>
+  <p>      <input type="submit" class="button3" value="Submit" style="width:200px ; height:30px"/></p>
+</form>
+     
+       
+    </body>
+</html>
